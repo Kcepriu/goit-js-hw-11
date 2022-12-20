@@ -12,6 +12,13 @@
 4. Создай новый пустой репозиторий на GitHub.
 5. Открой проект в VSCode, запусти терминал и свяжи проект с GitHub-репозиторием
    [по инструкции](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
+
+git remote -v
+Змінити URL, якщо клонували з чужого, а хочемо пушити в свій
+git remote set-url --push  origin  git@github.com:Kcepriu/test_works_git.git
+git remote set-url origin  git@github.com:Kcepriu/race_from_promice.git
+
+
 6. Установи зависимости проекта в терминале командой `npm install` .
 7. Запусти режим разработки, выполнив команду `npm start`.
 8. Перейди в браузере по адресу [http://localhost:1234](http://localhost:1234).
