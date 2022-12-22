@@ -73,21 +73,32 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 .photo-card {
   display: flex;
   flex-direction: column;
-  max-width: calc((100% - 3 * 20px) / 4);
-  /* height: calc((100% - 3 * 20px) / 4); */
+  max-width: 375px;
+  max-height: 340px;
+  /* max-width: calc((100% - 3 * 20px) / 4); */
+  /* max-height: 300px; */
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+  border: 1px solid #eeeeee;
 }
 
 .thumb {
   flex-grow: 1;
   max-width: 100%;
+  height: 260px;
 }
 
 .photo-card img {
   max-width: 100%;
+  height: 260px;
+  object-fit: cover;
 }
 
 .info {

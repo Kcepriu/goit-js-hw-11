@@ -99,7 +99,6 @@ async function findImage() {
       //Якщо є дані то додаємо їх в кінець галереї
       //Дьоргаємо галерею щоб оновилася
       addImageToGallery(arrayFindElement);
-      enableSmoothScroll();
 
       if (fetchImage.curentPage === 1) {
         //Якщо перша сторінкка то малюємо кнопку
@@ -135,28 +134,12 @@ function refreshGallery() {
   lightbox.refresh();
 }
 
-async function enableSmoothScroll() {
-  return;
-
-  const { height: cardHeight } =
-    refs.gallery.firstElementChild.getBoundingClientRect();
-
-  console.log(cardHeight);
-  const cardHeight1 = 350;
-
-  window.scrollBy({
-    top: cardHeight * 2,
-    behavior: 'smooth',
-  });
-}
-
 // * SCROOL
 function handleInfiniteScroll() {
   throttle(() => {
     const endOfPage =
       window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
     if (endOfPage) {
-      console.log('curentPage', fetchImage.curentPage);
       onClickButtonLoadMore();
     }
   }, 1000)();
@@ -165,6 +148,20 @@ function handleInfiniteScroll() {
 function enableInfiniteScrolling() {
   window.addEventListener('scroll', handleInfiniteScroll);
 }
+
 const disableInfiniteScroll = () => {
   window.removeEventListener('scroll', handleInfiniteScroll);
 };
+
+// function enableSmoothScroll() {
+//   const { height: cardHeight } =
+//     refs.gallery.firstElementChild.getBoundingClientRect();
+
+//   console.log(cardHeight);
+//   const cardHeight1 = window.innerHeight;
+
+//   window.scrollBy({
+//     top: cardHeight1,
+//     behavior: 'smooth',
+//   });
+// }

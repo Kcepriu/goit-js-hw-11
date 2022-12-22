@@ -16,7 +16,7 @@ export default class TemplateHTML {
     return `
         <div class="photo-card">
          <a class="thumb" href="${dataElement.largeImageURL}">
-            <img src="${dataElement.webformatURL}" alt="${dataElement.tags}" loading="lazy" width="450" />          
+            <img src="${dataElement.webformatURL}" alt="${dataElement.tags}" loading="lazy" width="375" />          
           </a>
           <div class="info">
             <p class="info-item">
